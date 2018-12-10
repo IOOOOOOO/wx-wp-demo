@@ -1,0 +1,24 @@
+<view class="page-title">用户注册</view>
+
+<view>
+	<view>用户名：</view>
+	<input type="text" bindinput="inputUsername" focus />
+</view>
+
+<view>
+	<view>密码：</view>
+	<input type="text" password bindinput="inputPassword" />
+</view>
+
+<view>
+	<view>邮箱：</view>
+	<input type="text" email bindinput="inputEmail" />
+</view>
+
+<view>
+	<button class="btn" bindtap="register">{{bind?"注册并绑定微信账户":"注册新用户"}}</button>
+</view>
+
+<view>
+	{{errMessage}}
+</view>

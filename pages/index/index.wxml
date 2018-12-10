@@ -1,0 +1,10 @@
+<navigator url="/pages/post/post?id={{ item.id }}" class="posts" wx:for="{{ entities }}" wx:key="{{ item.id }}">
+	<view class="article">
+		<view class="post-title">{{ item.title.rendered }}</view>
+		<view class="post-content">{{ item.excerpt.plaintext }}</view>
+	</view>
+</navigator>
+<view class="loading" wx:if="{{ isLoading }}">
+	<image mode="widthFix" src="../images/loading.gif" />
+</view>
+<view class="footer" wx:if="{{isEarth}}">没有了</view>

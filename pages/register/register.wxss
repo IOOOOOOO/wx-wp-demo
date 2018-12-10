@@ -1,0 +1,7 @@
+.page-title{
+	text-align:center;
+	font-size:48rpx;
+	font-weight: bold;
+	color:#21759b;
+	padding:5px 0;
+}

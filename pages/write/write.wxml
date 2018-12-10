@@ -1,0 +1,40 @@
+<view class="write-title">
+	<view class="write-title-text">标题</view>
+	<view>
+		<input value="{{entity.title}}" type="text" focus placeholder="标题" bindinput="inputTitle"/>
+	</view>
+</view>
+
+<view class="write-content">
+	<view class="write-content-text">正文</view>
+	<view>
+		<textarea value="{{entity.content}}" type="text" placeholder="正文" maxlength="-1" bindinput="inputContent"/>
+	</view>
+</view>
+
+<view class="uploader">
+	<block wx:for="{{images}}" wx:key="path">
+		<view>
+			<image src="{{item.path}}" mode="aspectFill" data-src="{{item.path}}" data-id="{{item.id}}" bindtap="preview" bindlongpress="imageOption" />
+			<progress percent="{{progress[index]}}" />
+		</view>
+	</block>
+	<view class="upload-btn" bindtap="upload">+</view>
+</view>
+
+<view class="select-categories">
+	<picker mode="selector" range="{{categories}}" range-key="name" value="{{index}}" bindchange="selectCategory">
+		<view>选择分类：{{ categories[selectIndex].name }}</view>
+	</picker>
+</view>
+
+<view class="write-switch">
+	<text>发布：</text>
+	<switch bindchange="setStatus" />
+</view>
+
+<view class="write-submit">
+	<button bindtap="publish" disabled="{{!entity.title || !entity.content}}">{{entity.status !== "publish" ? "保存" : "发布"}}</button>
+</view>
+
+<view>{{status}}</view>

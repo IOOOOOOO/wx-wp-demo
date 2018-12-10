@@ -1,0 +1,40 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/post/post",
+		"pages/user/user",
+		"pages/login/login",
+		"pages/write/write",
+		"pages/register/register"
+	],
+	"window": {
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "基于WordPress的小程序",
+		"navigationBarTextStyle": "black",
+		"enablePullDownRefresh": true
+	},
+	"tabBar": {
+		"selectedColor": "#000",
+		"list": [
+			{
+				"iconPath": "pages/images/home.png",
+				"selectedIconPath": "pages/images/home-selected.png",
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				"iconPath": "pages/images/user.png",
+				"selectedIconPath": "pages/images/user-selected.png",
+				"pagePath": "pages/user/user",
+				"text": "我的"
+			},
+			{
+				"iconPath": "pages/images/pencil.png",
+				"selectedIconPath": "pages/images/pencil-selected.png",
+				"pagePath": "pages/write/write",
+				"text": "创作"
+			}
+		]
+	}
+}

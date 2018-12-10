@@ -1,0 +1,75 @@
+.user{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height:100vh;
+}
+.login-text{
+	margin:30px 0;
+	font-size:48rpx;
+	text-align:center;
+	color:#666;
+}
+.avatar{
+	margin:30px auto 0;
+	background-color: #CCC;
+	width:320rpx;
+	height:320rpx;
+	border-radius:50%;
+	overflow: hidden;
+}
+.user-info{
+	text-align: center;
+	font-size:42rpx;
+	color:#21759b;
+}
+.username-text{
+	font-size:50rpx;
+	margin:10px 0;
+}
+.admin-text{
+	color:#FFF;
+	background-color:#21759b;
+	padding:3px 9px;
+	border-radius: 3px;
+}
+.btn{
+	margin-bottom:30px;
+}
+
+.user-modal-box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100vw;
+	height:100vh;
+	background-color: rgba(0,0,0,0.5)
+}
+.box-body{
+	display: flex;
+	flex-direction: column;
+	background-color:#FFF;
+	padding:5% 10%;
+	text-align: center;
+	border-radius: 8px;
+}
+.box-title{
+	font-size: 48rpx;
+	color:#21759b;
+	border-bottom:1px solid #CCC; 
+}
+.box-description{
+	font-size:36rpx;
+	margin:20px 0;
+}
+.box-btn{
+	display: flex;
+	justify-content: space-between;
+}
+.box-btn button{
+	background-color: #21759b;
+	color:#FFF;
+}

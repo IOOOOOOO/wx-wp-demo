@@ -1,0 +1,17 @@
+<view class="login">
+	<view class="form">
+		<view class="username">
+			<view class="text">用户名:</view>
+			<input class="input" type="text" focus placeholder="输入用户名" bindinput="inputUser" />
+		</view>
+		<view class="password">
+			<view class="text">密码：</view>
+			<input class="input" type="text" password placeholder="输入密码" bindinput="inputPassword" />
+		</view>
+		<button class="btn login-btn" bindtap="login">{{ bind ? "绑定微信帐号" : "登录"}}</button>
+		<button class="btn register-btn" bindtap="toRegisterPage">注册并绑定微信帐号</button>
+		<button class="btn weixin-login-btn register-btn" bindtap="weixinLoginBtn">或使用微信登录</button>
+		<button class="btn" bindtap="goHome">返回首页</button>
+		<view class="err-message" wx:if="{{message}}">{{ message }}</view>
+	</view>
+</view>

@@ -1,0 +1,29 @@
+<view class="user">
+	<view class="avatar">
+		<image src="{{ user_avatar.lg }}" mode="widthFix" />
+	</view>
+	<view wx:if="{{user_email}}" class="user-info">
+		<view class="admin" wx:if="{{user_caps.administrator}}">
+			<text class="admin-text">管理员</text>
+		</view>
+		<view class="username-text">{{user_nicename}}</view>
+		<view class="email-text">{{user_email}}</view>
+	</view>
+	<view class="login-text" wx:else>请登录</view>
+	<view wx:if="{{!user_email}}">
+		<button class="btn register-btn" bindtap="toRegisterPage">注册</button>
+		<button class="btn login-btn" bindtap="toLoginPage">登录</button>
+	</view>
+	<button wx:if="{{user_email}}" class="btn logout-btn" bindtap="logout">退出</button>
+</view>
+
+<view class="user-modal-box" wx:if="{{modalBox}}">
+	<view class="box-body">
+		<view class="box-title">是否绑定微信帐号</view>
+		<view class="box-description">绑定以后可以用微信直接登录</view>
+		<view class="box-btn">
+			<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">绑定</button>
+			<button bindtap="cancleBind">取消</button>
+		</view>
+	</view>
+</view>

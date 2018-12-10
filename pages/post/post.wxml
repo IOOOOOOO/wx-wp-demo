@@ -1,0 +1,18 @@
+<import src="/towxml/entry.wxml" />
+<view class="loading" wx:if="{{ isLoading }}">
+	<image mode="widthFix" src="../images/loading.gif" />
+</view>
+<view class="post">
+	<view class="featuredmedia" wx:if="{{ featured_media }}">
+		<image mode="widthFix" src="{{ featured_media }}" />
+	</view>
+	<view class="post-title">
+		{{ title}}
+	</view>
+	<view class="post-content">
+		<template is="entry" data="{{ ...content }}" />
+	</view>
+	<view wx:if="{{author.name}}" class="author">
+		作者：{{ author.name }}
+	</view>
+</view>

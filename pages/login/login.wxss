@@ -1,0 +1,22 @@
+.form{
+	padding-top:30px;
+}
+.form .text{
+	padding-left:5px;
+	font-size:38rpx;
+}
+
+.username,
+.password{
+	margin-bottom:30px;
+}
+
+.err-message{
+	text-align: center;
+	color:#FFF;
+	padding:10px 0;
+	background-color: #f17c67;
+}
+.weixin-login-btn{
+	background-color:#1AAD16;
+}

@@ -1,0 +1,6 @@
+.post{
+	padding:15px;
+}
+.post-title{
+	text-align:center;
+}
